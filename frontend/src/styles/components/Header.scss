@@ -1,0 +1,65 @@
+@import "../index.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+  width: 96%;
+  height: 4em;
+
+  nav {
+    width: 75%;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: flex-start;
+    height: inherit;
+
+    button {
+      height: calc(4em - .6em);
+      font-family: 'Geologica', sans-serif;
+      font-size: 16px;
+      width:10vw;
+      margin-block: .3em;
+      margin-inline: .3em 0;
+      border-radius: 50px;
+      transition: background-color .2s ease, color .2s ease;
+      background-image: none;
+      border: none;
+      background-color: white;
+      color: black;
+      &:hover {
+        background-color: $blind-violet-color;
+        color: black;
+      }
+      &.active {
+        background-color: $lighter-violet-color;
+        color:white;
+      }
+    }
+  }
+
+  button#save {
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    border: none;
+    z-index: 100;
+    color: black;
+    background-color: $lighter-violet-color;
+    background-image: url("../../assets/bookmark.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-color .2s ease, color .2s ease;
+    margin-top:0;
+    &:hover {
+      background-color: $blind-violet-color;
+      color: black;
+    }
+
+    &active {
+      background-color: rgb(120, 138, 178);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "../index.scss";
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .article {
+    position: relative;
+    width:  96%;
+    margin:  2%;
+    height:  100vh;
+    border-radius:  50px;
+    background: url("../../assets/mainBackground.svg") no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $blind-violet-color;
+    .search{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-block: calc(16%);
+      width: fit-content;
+      height: fit-content;
+      button{
+        height: 4em;
+        width: 4em;
+        border-radius: 50%;
+        border: none;
+        z-index: 100;
+        color: black;
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-color .2s ease, color .2s ease;
+        margin-top: 0;
+      }
+      #save{
+        background-image:  url("../../assets/saveBtn.svg");
+      }
+      #draw{
+        background-image:  url("../../assets/drawBtn.svg");
+      }
+      button:hover{
+        background-color: $blind-violet-color;
+        color: black;
+      }
+      button:active{
+        background-color: rgb(120, 138, 178);
+      }
+      input{
+        font-family: 'Geologica', sans-serif;
+        height: 4em;
+        width: 40vw;
+        border-radius:40px;
+        border: none;
+        font-size: 16px;
+        padding-left: 1em;
+        color: black;
+        font-weight: 200;
+        margin-inline: .5em;
+      }
+    }
+  }
+/**
+  .article::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top:  0;
+    right:  0;
+    width:  10%;
+    height:  16%;
+    background: white;
+    border-top-right-radius:  50px;
+    border-bottom-left-radius:  50px;
+
+  }
+  **/
+
+
+}

@@ -1,6 +1,6 @@
 $black-color: black;
 $light-violet-color: #7D98E2;
-$lighter-violet-color: #97ABDF;
+$lighter-violet-color: rgb(151, 171, 223);
 $blind-violet-color: rgba(151, 171, 223, 0.25);
 $auth-title-color: #101828;
 $auth-text-color: #475467;
@@ -12,7 +12,7 @@ $light-grey-color:#D9D9D9;
 
 
 body{
-  width:100wv;
+  width:100vw;
   height:fit-content;
   min-height: 100vh;
   margin: 0 auto;
