@@ -1,3 +1,98 @@
-.authPage{
+@import "../index.scss";
 
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authPage{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+  max-width: 500px;
+  min-width: 330px;
+  h1{
+    margin-block: .5em 0;
+    font-size: 30px;
+    color: $auth-title-color;
+    padding: 0;
+    margin-inline: 0;
+    font-weight: 500;
+  }
+  p{
+    margin-bottom: 2em;
+    font-size: 16px;
+    color:$auth-text-color;
+    font-weight: 300;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    label{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1.5em;
+      font-size:14px;
+      color: $data-auth-color;
+      font-weight: 400;
+      span{
+      padding-bottom: .5em
+      }
+      input{
+        height: 2.7em;
+        border-radius: 30px;
+        border: 1px solid $input-border-color;
+        padding-left: 1em;
+        font-size:16px;
+        color: $inner-input-auth-color;
+        font-family: 'Geologica', sans-serif;
+      }
+      input::-webkit-input-placeholder {
+        font-weight: 300;
+      }
+      input::-moz-placeholder {
+        font-weight: 300;
+      }
+
+      input:-ms-input-placeholder {
+        font-weight: 300;
+      }
+
+    }
+    div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        label{
+          padding-block: 0;
+          padding-inline: .5em 0;
+          font-weight: 400;
+
+        }
+        input{
+          border: .5px solid $input-border-color;
+        }
+      }
+      span{
+        font-size: 14px;
+        color:$light-violet-color;
+        font-weight: 500;
+      }
+    }
+  }
+  h5{
+    font-size: 14px;
+    font-weight: 200;
+    span{
+      color: $light-violet-color;
+      font-weight: 400;
+    }
+  }
 }

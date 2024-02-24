@@ -1,5 +1,5 @@
 import  { FC } from "react";
-
+import '../styles/components/AuthButton.scss';
 const AuthButton: FC<{ buttonText: string }> = (props) => {
     const { buttonText } = props;
 
