@@ -2,7 +2,13 @@ import {FC} from "react";
 import logo from '../assets/logo.svg';
 import AuthButton from '../components/AuthButton';
 import '../styles/pages/AuthPage.scss';
+import {useNavigate} from "react-router-dom";
 const Register : FC = () => {
+    const navigate = useNavigate();
+
+    const handleNavigate = (path: string) => {
+        navigate(path);
+    }
     return(
         <div className='authPage'>
             <img src={logo} alt='logo'/>
@@ -19,7 +25,7 @@ const Register : FC = () => {
                 </label>
                 <AuthButton buttonText="Sign in" />
             </form>
-            <h5>Already have an account? <span>Log in</span></h5>
+            <h5>Already have an account? <button onClick={() => handleNavigate("/login")}>Log in</button></h5>
         </div>
     )
 

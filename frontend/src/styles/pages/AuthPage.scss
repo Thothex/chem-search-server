@@ -90,7 +90,17 @@ body{
   h5{
     font-size: 14px;
     font-weight: 200;
-    span{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    width: inherit;
+    button{
+      margin: 0;
+      height: fit-content;
+      width: fit-content;
+      background: none;
+      border: none;
+      font-family: 'Geologica', sans-serif;
       color: $light-violet-color;
       font-weight: 400;
     }
