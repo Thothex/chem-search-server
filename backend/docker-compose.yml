@@ -36,6 +36,9 @@ services:
       - ./app:/app
     env_file:
       - .env
+    depends_on:
+      - database-psql
+      - database-neo4j
 
 volumes:
   pgdata:
