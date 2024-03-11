@@ -1,11 +1,10 @@
 from typing import List
 
+from app.crud.crud_user import create_user, get_user
+from app.db.postgresql.session import SessionLocal
+from app.schemas.user import User, UserCreate
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-
-from backend.app.crud.crud_user import create_user, get_user
-from backend.app.db.postgresql.session import SessionLocal
-from backend.app.schemas.user import User, UserCreate
 
 router = APIRouter()
 

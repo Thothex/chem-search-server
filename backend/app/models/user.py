@@ -1,4 +1,4 @@
-from database.app.db.postgresql.base_class import Base
+from app.db.postgresql.base_class import Base
 from sqlalchemy import Column, Integer, String
 
 
