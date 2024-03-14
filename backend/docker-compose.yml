@@ -16,6 +16,16 @@ services:
       - ${NEO4J_BASE_DIR}/plugins:/plugins
     env_file:
       - .env
+  database-psql:
+    restart: unless-stopped
+    image: postgres:15
+    container_name: database
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
   backend:
     build:
       context: .
@@ -26,3 +36,9 @@ services:
       - ./app:/app
     env_file:
       - .env
+    depends_on:
+      - database-psql
+      - database-neo4j
+
+volumes:
+  pgdata:
